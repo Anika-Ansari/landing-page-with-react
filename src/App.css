@@ -1,0 +1,176 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.nav {
+  background-color: black;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 50px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.list li a:hover {
+  color: #C9F31D;
+}
+
+.btn button {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #C9F31D;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 40px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  background-color: black;
+}
+
+.banner img {
+  width: 400px;
+  height: 500px;
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.center p {
+  font-size: 20px;
+}
+
+.center h1 {
+  font-size: 50px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C9F31D;
+  font-size: 10px;
+  gap: 50px;
+}
+
+@media (max-width: 1024px) {
+  .nav {
+    padding: 10px 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  .list {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: black;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 10;
+  }
+
+  #menu-toggle:checked + .hamburger + .list {
+    display: flex;
+  }
+
+  .btn {
+    display: none;
+  }
+
+  .center {
+    flex-direction: column;
+    padding: 30px 15px;
+  }
+
+  .banner img {
+    width: 90%;
+    height: auto;
+  }
+
+  .center h1 {
+    font-size: 35px;
+  }
+
+  .center p {
+    font-size: 16px;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .center h1 {
+    font-size: 28px;
+  }
+
+  .center p {
+    font-size: 14px;
+  }
+
+  .nav img {
+    max-width: 120px;
+  }
+}
